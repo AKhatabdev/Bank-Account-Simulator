@@ -1,4 +1,9 @@
-class Main 
+/*
+Author: Awais Khatab
+Title: Bank Account Simulator, Practice, Testing and Prototyping
+Version: 1.0.1
+ */
+class Main
 {
 	public static void main( String args[] ) 
 	{
@@ -65,24 +70,4 @@ class Main
 		
 		
 	}
-}	
-
-/*
-res = mike.transferFrom( miri, 10.00 );
-
-if ( !res )
-{ System.out.println( "Transfer from failed" ); }
-
-//Transfer 120.00 from mike's account to cori's account 
-res = mike.transferTo( cori, 120.00 );
-
-if ( !res )
-{ System.out.println( "Transfer to failed" ); } 
-	else{
-			System.out.print("Classic Accounts: ");
-			System.out.printf( "Mike = %5.2f\n", mike.getBalance() ); 
-			System.out.printf( "Miri = %5.2f\n", miri.getBalance() ); 
-			System.out.printf( "Cori = %5.2f\n", cori.getBalance() );
-			System.out.println();  
-		}
-*/
+}

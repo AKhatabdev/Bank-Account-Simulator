@@ -8,7 +8,7 @@ class AccountStudent extends AccountBetter2 implements Interest
 		double chargeAmount = getBalance() * charge;
 		double tempBalance = getBalance() + chargeAmount;
 			
-		if(a != true)
+		if(!inCredit)
 		{	
 			if(getBalance() < -5000) {
 				System.out.printf("Student Charge: %5.2f\n", chargeAmount);
