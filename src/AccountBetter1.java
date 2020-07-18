@@ -15,7 +15,7 @@ class AccountBetter1 extends Account implements Transfer
 		{
 			from.withdraw(amount); //withdraw from an account the amount
 			deposit(amount);	   //deposit the amount withdrawn to the account requesting the transferFrom 
-			return true;		   //return true if succesful
+			return true;		   //return true if successful
 		}
 		else {return false;} //else Amount is over the available balance return FALSE
 	}
@@ -28,7 +28,7 @@ class AccountBetter1 extends Account implements Transfer
 		{	
 			withdraw(amount);   //withdraw amount from account
 			to.deposit(amount); //deposit the amount withdrawn to the recipient account transferTo 
-			return true;		//return true if succesful
+			return true;		//return true if successful
 		}
 		else {return false;} //else Amount is over the available balance return FALSE
 	}
