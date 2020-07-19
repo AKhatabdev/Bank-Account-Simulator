@@ -5,7 +5,7 @@ Version: 1.0.1
  */
 class Main
 {
-	public static void main( String args[] ) 
+	public static void main(String[] args)
 	{
 		AccountBetter1 mike = new AccountBetter1();
 		
@@ -55,7 +55,7 @@ class Main
 		System.out.println();
 		System.out.println();
 		
-		//Checking withdrawls are NOT allowed when overdraft limit has been reached
+		//Checking withdraw are NOT allowed when overdraft limit has been reached
 		res = Awais.transferTo(miri, 10);
 		if( !res )
 		{ System.out.println( "Transfer to failed, Awais's overdraft limit reached" ); }
@@ -63,11 +63,10 @@ class Main
 			System.out.printf( "Awais = %5.2f\n", Awais.getBalance() );
 		}
 		System.out.print("Applying interest to a classic account overdrawn");
-		System.out.println();;
+		System.out.println();
 		Awais.inCredit(Awais);
 		Awais.creditCharge(Awais);
 		System.out.printf("Awais Balance = %5.2f\n", Awais.getBalance() );
-		
 		
 	}
 }

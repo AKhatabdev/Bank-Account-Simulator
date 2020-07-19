@@ -1,6 +1,6 @@
 
 public interface Transfer 
 {
-	public boolean transferFrom( Account from, double amount );
-	public boolean transferTo( Account to, double amount );
+	boolean transferFrom(Account from, double amount);
+	boolean transferTo(Account to, double amount);
 }

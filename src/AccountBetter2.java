@@ -1,28 +1,22 @@
 
-class AccountBetter2 extends AccountBetter1 implements Interest
-{
+class AccountBetter2 extends AccountBetter1 implements Interest {
 	//Boolean to decide if Account is in credit or needs to be charged
 	boolean inCredit;
 	
-	public boolean inCredit(Account name) 
-	{
-		if(getBalance() >= 0.0) {
-			inCredit = true;}
+	public boolean inCredit(Account name) {
+		if(getBalance() >= 0.0) { inCredit = true;}
 		return inCredit;
 	}
-	
-	public void creditCharge(Account name) 
-	{	//APR 10% of Balance overdrawn
+	public void creditCharge(Account name) {
+		//APR 10% of Balance overdrawn
 		double charge = 0.00026116;
 		double chargeAmount = getBalance() * charge;
 		double tempBalance = getBalance() + chargeAmount;
 				
-		if(!inCredit)
-		{					
+		if(!inCredit) {
 			System.out.printf("Charge: %5.2f\n", chargeAmount);
 			//If balance with charge is > overdraft
-			if(tempBalance > getTheOverdraft())
-			{
+			if(tempBalance > getTheOverdraft()) {
 				//Set new Overdraft limit
 				setTheOverdraft(tempBalance);
 				System.out.printf("Overdraft limit exceeded: %5.2f\n", getTheOverdraft());
