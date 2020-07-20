@@ -1,11 +1,22 @@
+/*
+Author: Awais Khatab
+Title: Bank Account Simulator, Practice, Testing and Prototyping
+Version: 1.1.0
 
-class AccountBetter2 extends AccountBetter1 implements Interest {
+Note:
+Basic Banking App Simulator is a small project I created to help you learn some Java programming :)
+
+Quick tip to start:
+Look around at the Account classes and make sure to read the comments carefully,
+they will help you try to understand the code.
+
+Once you have had a look around try creating some accounts and make some transfers between them!
+ */
+class AccountPlatinum extends AccountBasic implements Interest {
 	//Boolean to decide if Account is in credit or needs to be charged
 	boolean inCredit;
-	
-	public boolean inCredit(Account name) {
+	public void inCredit(Account name) {
 		if(getBalance() >= 0.0) { inCredit = true;}
-		return inCredit;
 	}
 	public void creditCharge(Account name) {
 		//APR 10% of Balance overdrawn
