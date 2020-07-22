@@ -1,3 +1,5 @@
+import java.beans.JavaBean;
+
 /*
 Author: Awais Khatab
 Title: Bank Account Simulator, Practice, Testing and Prototyping
@@ -12,6 +14,7 @@ they will help you try to understand the code.
 
 Once you have had a look around try creating some accounts and make some transfers between them!
  */
+
 class AccountPlatinum extends AccountBasic implements Interest {
 	//Boolean to decide if Account is in credit or needs to be charged
 	boolean inCredit;
@@ -23,7 +26,7 @@ class AccountPlatinum extends AccountBasic implements Interest {
 		double charge = 0.00026116;
 		double chargeAmount = getBalance() * charge;
 		double tempBalance = getBalance() + chargeAmount;
-				
+
 		if(!inCredit) {
 			System.out.printf("Charge: %5.2f\n", chargeAmount);
 			//If balance with charge is > overdraft
