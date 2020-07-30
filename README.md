@@ -2,7 +2,7 @@
  
 ### Author: Awais Khatab
 ### Title: Bank Account Simulator, Practice, Testing and Prototyping
-### Version: 1.1.0
+### Version: 1.1.5
 
 #### Note:
 ##### Basic Banking App Simulator is a small project I created to help you learn Java programming Methods and interfaces.:)
