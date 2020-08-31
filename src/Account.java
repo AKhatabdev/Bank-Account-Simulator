@@ -14,7 +14,7 @@ Once you have had a look around try creating some accounts and make some transfe
  */
 class Account {
 	protected double theBalance = 0.00;
-	protected double theOverdraft = 0.00; //Overdraft allowed
+	protected double theOverdraft = 0.00; // Overdraft allowed
 	
 	public double getBalance() { return theBalance; }
 	
