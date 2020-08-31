@@ -30,7 +30,42 @@ class Account {
 		assert money >= 0.00; //Cause error if money -ve
 	    theBalance = theBalance + money;
 	}
-	
-	public double getTheOverdraft() { return theOverdraft; }
-	public void setTheOverdraft(double theOverdraft) { this.theOverdraft = theOverdraft; }
+
+
+
+	//@ requires true;
+	//@ ensures \result == theOverDraft;
+	public /*@ pure @*/ double getTheOverdraft() { return theOverdraft; }
+
+	//@ requires n <= 0;
+	//@ ensures n == theOverDraft;
+	public void setTheOverdraft(double n) { this.theOverdraft = n; }
 }
+/*
+	pure: any method without any side effects
+
+	<precondition>
+	@requires 'Boolean': makes sure that the condition is true or false
+	@requires a && x && p && q: each variable is required true
+
+	<post condition>
+	@ensures newBalance == \old(balance - n &&
+							\result == newBalance;
+	This makes sure that this is true before execution of the method
+
+	JML EXPRESSIONS
+	!a (“not a")
+	a && b (“a and b")
+	a || b (“a or b")
+	a ==> b (“a implies b")
+	a <==> b (“a is equivalent to b")
+
+	 If a and b are boolean JML expressions, x a variable of
+	type T:
+	(\forall T x;a) (“for all x of type T, a is true")
+	(\exists T x;a) (“there exists x of type T such that a")
+	(\forall T x;a;b) (“for all x of type T fulfilling a, b is true")
+	(\exists T x;a;b) (“there exists an x of type T fulfilling a,
+	such that b is true")
+
+*/
