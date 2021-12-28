@@ -1,4 +1,4 @@
-# Bank-Account-Simulator: To Help You Learn Java!
+# Basic Bank Account Simulator: To Help You Learn Java!
  
 ### Author: Awais Khatab
 ### Title: Bank Account Simulator, Practice, Testing and Prototyping
